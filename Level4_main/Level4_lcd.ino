@@ -4,7 +4,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 /*-----------------------------------------------*/
 void LcdSetup()
 {
-  lcd.begin();
+  lcd.init(); //--> If lcd.init(); results in an error, change it from lcd.init(); to lcd.begin();
   lcd.display();        //เปิดหน้าจอ
   lcd.backlight();      //เปิดไฟ backlight
   lcd.clear();          //ล้างหน้าจอ
