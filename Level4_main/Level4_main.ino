@@ -3,6 +3,7 @@
 #include <avr/wdt.h>
 
 uint32_t Data = 0;
+
 /*-----------------------------------------------*/
 void setup() {
   Serial.begin(9600); //set the baud rate for serial communication
@@ -15,6 +16,7 @@ void setup() {
   LcdSetup();
 }
 /*-----------------------------------------------*/
+
 void loop() {
   if (Serial.available() > 0) {
     int newData = Serial.parseInt();
@@ -24,28 +26,31 @@ void loop() {
   }
   switch (Data) {
     case 1:
-      HandRightGripe(0);
+      //Add function 
       break;
 
     case 2:
-      HandRightRelease(0);
+      //Add function 
       break;
 
     case 3:
+      //Add function 
       break;
 
     case 4:
-      Rainbow(15);
-      NeopixelClose();
+      //Add function 
       break;
     
     case 5:
-            break;
+      //Add function 
+      break;
 
     case 6:
-            break;
+      //Add function 
+      break;
 
     case 7:
+      //Add function 
       break;
     
     case 8://Stop
@@ -59,9 +64,13 @@ void loop() {
       resetFunc();
       break;         
 
-    case 13: //GrapDetectmove
-    break;
+    case 11: 
+      //Add function 
+      break;
 
+    case 12: 
+      //Add function 
+      break;
   }
 }
 
